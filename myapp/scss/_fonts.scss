@@ -1,0 +1,16 @@
+@import "_mixins/font-face";
+
+@include font-face("Rubik", "../fonts/Rubik-Light/Rubik-Light", 300);
+@include font-face("Rubik", "../fonts/Rubik-Regular/Rubik-Regular", 400);
+@include font-face("Rubik", "../fonts/Rubik-Medium/Rubik-Medium", 500);
+@include font-face("Roboto", "../fonts/RobotoRegular/RobotoRegular", 400);
+@include font-face("Roboto", "../fonts/RobotoMedium/RobotoMedium", 500);
+
+
+
+
+
+@include font-face("BebasNeueCyrillic", "../fonts/BebasNeueCyrillic/BebasNeueCyrillic", 400);
+@include font-face("Roboto", "../fonts/RobotoLight/RobotoLight", 200);
+@include font-face("Roboto", "../fonts/Robotolightitalic/Robotolightitalic", 200, italic);
+@include font-face("Roboto", "../fonts/RobotoBold/RobotoBold", 700);

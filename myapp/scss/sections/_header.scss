@@ -1,0 +1,201 @@
+header {
+    position: relative;
+    background: rgba(0, 0, 0, 0.534) url('../img/header-bg.jpg') no-repeat;
+    background-size: cover;
+    color: #fff;
+    a {
+        color: #fff;
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+}
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    &:after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+    }
+}
+.nav {
+    padding: 35px 0 8px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: 0.3s;
+    z-index: 1;
+
+    &.active {
+        background: #444444;
+    }
+}
+.header {
+    padding-top: 88px;
+    &__title {
+        font-size: 64px;
+        line-height: 76px;
+        font-weight: 700;
+        margin-top: 50px;
+        @media only screen and (max-width: 992px) {
+            font-size: 45px;
+        }
+        @media only screen and (max-width: 419px) {
+            font-size: 34px;
+        }
+    }
+    &__subtitle {
+        max-width: 440px;
+        font-size: 48px;
+        line-height: 57px;
+        @media only screen and (max-width: 992px) {
+            font-size: 26px;
+            line-height: 1.2;
+            max-width: 250px;
+        }
+        @media only screen and (max-width: 419px) {
+            font-size: 22px;
+            max-width: 220px;
+        }
+    }
+    &__pre {
+        font-size: 24px;
+        line-height: 28px;
+        margin-top: 10px;
+        margin-bottom: 40px;
+        @media only screen and (max-width: 992px) {
+            font-size: 18px;
+            line-height: 20px;
+        }
+        @media only screen and (max-width: 419px) {
+            font-size: 15px;
+        }
+    }
+    &__goods {
+        display: flex;
+        justify-content: space-around;
+        max-width: 1028px;
+        margin: 73px auto 50px;
+        @media only screen and (max-width: 768px) {
+            flex-wrap: wrap;
+        }
+    }
+    &__goods-title {
+        text-align: center;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 28px;
+        margin-top: 104px;
+    }
+    &__item {
+        text-align: center;
+        padding: 0 5px;
+        max-width: 171px;
+
+        @media only screen and (max-width: 768px) {
+            width: 28%;
+            margin-bottom: 20px;
+        }
+        @media only screen and (max-width: 419px) {
+            width: 40%;
+        }
+    }
+    &__text {
+        margin-top: 13px;
+    }
+}
+.logo {
+    &__text {
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 500;
+        color: #E9C154;
+        background: linear-gradient(to top, #E9C154, #fceabb);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        @media (min-width: 1200px) {
+            font-size: 24px;
+            line-height: 28px;
+            
+        }
+    }
+}
+.menu-toggle {
+    display: none;
+}
+.menu-wrap {
+    position: relative;
+}
+.contacts {
+    text-align: right;
+    @media only screen and (max-width: 992px) {
+        padding-right: 10%;
+    }
+    @media only screen and (max-width: 576px) {
+        text-align: left;
+    }
+    &__phone {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 22px;
+        color: #E9C154;
+        background: linear-gradient(to top, #E9C154, #fceabb);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        @media only screen and (min-width: 1200px) {
+            font-size: 24px;
+            line-height: 28px;
+        }
+    }
+    &__icon {
+        margin-right: 9px;
+    }
+    &__text {
+        color: #fff;
+    }
+}
+
+
+
+
+
+
+
+
+
+.toggle-menu {
+    display: none;
+}
+.cross {
+    display: none;
+}
+.main-menu {
+
+    ul {
+        display: flex;
+    }
+    li {
+        flex-grow: 1;
+    }
+    a  {
+        font-size: 15px;
+        line-height: 21px;
+        display: block;
+        padding: 7px;
+        @media only screen and (min-width: 1200px) {
+            padding: 7px 13px;
+            font-size: 18px;
+        }
+    }
+
+}
+
+//header
