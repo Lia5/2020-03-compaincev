@@ -1,0 +1,32 @@
+section.calc
+    .container
+        .calc__wrap
+            .row
+                .col-xl-6.col-lg-6.col-md-6.col-sm-12.col-12
+                    .calc__pic
+                .col-xl-6.col-lg-6.col-md-6.col-sm-12.col-12
+                    .calc__form
+                        h2.title-section Рассчитать стоимость доставки груза
+                        .subtitle Оставьте вашу информацию, мы рассчитаем стоимость и сообщим вам.
+                        form(action="")
+                            .form-line
+                                input(type="text" placeholder="Ваше имя")
+                            .form-line
+                                input(type="text" placeholder="Ваш телефон*")
+                            .form-line
+                                input(type="text" placeholder="Адрес пункта отправления")
+                            .form-line
+                                input(type="text" placeholder="Адрес пункта назначения")
+                            .form-line
+                                input(type="text" placeholder="Информация о грузе (название,вес)")
+                            .form-line
+                                label.checkbox
+                                    input(type="checkbox" name="Погрузка")
+                                    .input__text Погрузка
+                                label.checkbox
+                                    input(type="checkbox" name="Выгрузка")
+                                    .input__text Выгрузка
+                                label.checkbox
+                                    input(type="checkbox" name="Сборка мебели")
+                                    .input__text Сборка мебели
+                            a(href="").btn.calc__btn Узнать стоимость доставки

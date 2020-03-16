@@ -1,0 +1,26 @@
+.park {
+    padding: 80px 0 23px;
+    &__item {
+        background: #FFFFFF;
+        border: 1px solid #DADADA;
+        border-radius: 5px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    &__img {
+        width: 100%;
+        img {
+            max-width: 100%;
+        }
+    }
+    &__name {
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        color: #5F5F68;
+        max-width: 185px;
+        padding: 0 5px;
+        min-height: 30px;
+        margin: 3px auto;
+    }
+}

@@ -1,0 +1,38 @@
+.services {
+    padding: 0 0 60px 0;
+    &__item {
+        // height: 100%;
+        margin-bottom: 22px;
+    }
+    &__item-wrap {
+        border: 1px solid #DADADA;
+        border-radius: 5px;
+        padding: 58px 27px 33px 27px;
+        height: 100%;
+        @media only screen and (max-width: 375px) {
+            padding: 20px;
+        }
+    }
+    &__pic {
+        text-align: center;
+        margin-bottom: 45px;
+        @media only screen and (max-width: 375px) {
+            margin-bottom: 25px;
+            img {
+                max-height: 70px;
+            }
+        }
+    }
+    &__title {
+        margin-bottom: 23px;
+        text-align: center;
+        font-weight: 500;
+        min-height: 35px;
+        @media only screen and (max-width: 375px) {
+            min-height: auto;
+        }
+    }
+    &__info {
+        color: #9A9A9E;
+    }
+}
