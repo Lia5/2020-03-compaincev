@@ -34,5 +34,8 @@
     }
     &__info {
         color: #9A9A9E;
+        @media only screen and (max-width: 411px) {
+            max-width: 272px;
+        }
     }
 }

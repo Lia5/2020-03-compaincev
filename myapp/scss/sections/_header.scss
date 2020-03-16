@@ -6,9 +6,6 @@ header {
     color: #fff;
     a {
         color: #fff;
-        &:hover {
-            box-shadow: 0px 0px 10px #FFFFFF;
-        }
     }
 }
 .overlay {
@@ -28,16 +25,26 @@ header {
     }
 }
 .nav {
-    padding: 35px 0 8px 0;
+    padding: 22px 0 13px 0;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     transition: 0.3s;
     z-index: 1;
-
+    @media only screen and (max-width: 576px) {
+        padding: 6px 0 6px 0;
+    }
     &.active {
         background: #444444;
+    }
+    a {
+        &:hover  {
+            color: #E9C154;
+            background: linear-gradient(to top, #E9C154, #fceabb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     }
 }
 .header {
@@ -115,6 +122,7 @@ header {
     }
 }
 .logo {
+    padding-top: 3px;
     &__text {
         font-size: 20px;
         line-height: 30px;
@@ -138,11 +146,17 @@ header {
 }
 .contacts {
     text-align: right;
+    margin-top: -4px;
+    @media only screen and (min-width: 1200px) {
+        
+        margin-top: -8px;
+    }
     @media only screen and (max-width: 992px) {
         padding-right: 10%;
     }
     @media only screen and (max-width: 576px) {
         text-align: left;
+        margin-top: 3px;
     }
     &__phone {
         font-weight: 500;
