@@ -1,0 +1,45 @@
+.doc {
+    padding: 49px 0 45px;
+    background: rgba(0, 0, 0, 0.534) url('../img/doc-bg.jpg') no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    .subtitle {
+    }
+    &__title {
+        display: flex;
+        align-items: center;
+        color: #fff;
+        max-width: 240px;
+        margin-top: 30px;
+        margin-bottom: 25px;
+    }
+    &__icon {
+        margin-right: 12px;
+    }
+    &__items {
+        display: flex;
+        @media only screen and (max-width: 416px) {
+            flex-wrap: wrap;
+        }
+    }
+    &__item {
+        
+        @media only screen and (max-width: 416px) {
+            width: 100%;
+            text-align: center;
+        }
+        img {
+            max-height: 231px;
+        }
+        
+        & + .doc__item {
+            margin-left: 30px;
+            @media only screen and (max-width: 416px) {
+                margin-left: 0;
+                margin-top: 30px;
+            }
+        }
+    }
+
+}

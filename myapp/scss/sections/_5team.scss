@@ -1,0 +1,23 @@
+.team {
+    padding: 80px 0 50px;
+    &__item {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    &__pic {
+        width: 138px;
+        height: 138px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin: 0 auto 13px;
+        img {
+            width: 100%;
+        }
+    }
+    &__title {
+        font-weight: 500;
+    }
+    &__text {
+        font-weight: 300;
+    }
+}

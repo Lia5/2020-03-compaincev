@@ -1,19 +1,59 @@
 .footer {
-    padding: 159px 50px 59px;
-    .wrap {
+    padding: 159px 0 59px;
+    padding: 49px 0;
+    background: rgba(0, 0, 0, 0.534) url('../img/footer-bg.jpg') no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    a {
+        &:hover {
+            
+            color: #E9C154;
+            background: linear-gradient(to top, #E9C154, #fceabb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+    &__title {
+        margin-bottom: 17px;
+        font-weight: 500;
+    }
+    &__items {
+        margin-right: 35%;
+    }
+    &__item {
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        a {
+            display: block;
+            padding: 7px 0;
+            color: #E9C154;
+            background: linear-gradient(to top, #E9C154, #fceabb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            &:hover {
+                opacity: 0.6;
+            }
+        }
+        span {
+            display: block;
+            padding: 7px 0;
+            color: #E9C154;
+            background: linear-gradient(to top, #E9C154, #fceabb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     }
-    &__logo {
-        font-size: 25px;
-        // font-family: $title-font;
-        letter-spacing: 8px;
-        text-transform: uppercase;
+    &__icon {
+        margin-right: 9px;
     }
+
+    &__bottom {
+        padding: 62px 0 0;
+    }
+
     &__menu {
-        font-size: 12px;
-        text-transform: uppercase;
+        display: flex;
         ul {
             display: flex;
             justify-content: center;
@@ -21,28 +61,13 @@
     
         }
         a {
+            color: #fff;
             display: block;
-            padding: 20px;
+            padding: 7px 0;
         }
     }
-}
-.rights {
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 1.21;
-    color: #646464;
-}
-.social {
-    display: flex;
-    &__item {
-        display: block;
-        padding: 20px 33px;
-        &:hover svg {
-            fill: #fdac5c;
-        }
+    &__develop {
+        color: #fff;
+        text-decoration: underline;
     }
-    svg {
-        fill: #000;
-    }
-
 }

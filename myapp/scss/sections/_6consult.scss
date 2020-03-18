@@ -1,75 +1,22 @@
 .consult {
-    background: #f9fbfc;
-    padding: 105px 0 190px;
+    padding: 0 0 46px;
 
     @media screen and (max-width: 1115px) {
         padding: 40px 0;
     }
-    &__body {
-        display: flex;
-        @media screen and (max-width: 579px) {
-            flex-wrap: wrap;
-        }
+    .title-section {
+        max-width: 250px;
+    }
+    .subtitle {
+        margin-bottom: 23px;
     }
     &__form {
-        width: 60%;
-        @media screen and (max-width: 579px) {
-            width: 100%;
-        }
-    }
-    &__title {
-        font-size: 35px;
-        line-height: 45px;
-        color: $accent;
-        font-weight: 700;
-        margin-bottom: 20px;
-        @media screen and (max-width: 1115px) {
-            font-size: 33px;
-            line-height: 1.2;
-        }
-        @media screen and (max-width: 680px) {
-            font-size: 24px;
-        }
-    }
-    &__subtitle {
-        font-size: 18px;
-        line-height: 24px;
-        font-weight: 700;
-        color: #405646;
-        max-width: 495px;
-        margin-bottom: 87px;
-        @media screen and (max-width: 1115px) {
-            margin-bottom: 45px;
-        }
-        @media screen and (max-width: 680px) {
-            font-size: 13px;
-            line-height: 1.2;
-        }
+        margin-top: 23px;
     }
     &__pic {
-        width: 52%;
         position: relative;
-        @media screen and (max-width: 1528px) {
-            width: 44%;
-        }
-        
-        @media screen and (max-width: 1115px) {
-            width: 35%;
-        }
-        @media screen and (max-width: 579px) {
-            width: 100%;
-            margin-top: 20px;
-            padding-top: 20px;
-        }
-        &-wrap {
-            width: 100%;
-            position: absolute;
-            bottom: 0;
-            z-index: 1;
-            @media screen and (max-width: 579px) {
-               position: static;
-            }
-
+        @media screen and (max-width: 767px) {
+            margin-top: 30px;
         }
         img {
             max-width: 100%;
@@ -83,30 +30,17 @@
         flex-wrap: wrap;
     }
     @media screen and (max-width: 890px) {
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
 }
-.form-line-wrap {
-    display: flex;
-    align-items: center;
-    @media screen and (max-width: 890px) {
-        flex-wrap: wrap;
-    }
-    @media only screen and (max-width: 479px) {
-        justify-content: center;
-    }
-}
+
 .agree-line {
     font-size: 14px;
     line-height: 18px;
     position: relative;
-    max-width: 200px;
-    margin-left: 50px;
+    margin-bottom: 5px;
     @media screen and (max-width: 890px) {
         display: block;
-        width: 100%;
-        max-width: 350px;
-        margin-left: 0;
         margin-top: 20px;
     }
     span {
@@ -127,8 +61,6 @@
             border-top: none;
             border-right: none;
             top: 46%;
-            -webkit-transform: translate(0,-50%) rotate(-45deg);
-            -ms-transform: translate(0,-50%) rotate(-45deg);
             transform: translate(0,-50%) rotate(-45deg);
         }
     }
