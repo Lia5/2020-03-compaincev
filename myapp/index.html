@@ -29,11 +29,11 @@
                 </div>
                 <nav class="main-menu"> 
                   <ul>
-                    <li><a href="#">Автопарк</a></li>
-                    <li><a href="#">Услуги</a></li>
-                    <li><a href="#">Стоимость</a></li>
-                    <li><a href="#">Команда</a></li>
-                    <li><a href="#">Документы</a></li>
+                    <li><a href="#park" class="scroll-to">Автопарк</a></li>
+                    <li><a href="#services" class="scroll-to">Услуги</a></li>
+                    <li><a href="#calc" class="scroll-to">Стоимость</a></li>
+                    <li><a href="#team" class="scroll-to">Команда</a></li>
+                    <li><a href="#doc" class="scroll-to">Документы</a></li>
                   </ul>
                 </nav>
               </div>
@@ -47,8 +47,8 @@
           <div class="row">
             <div class="col-xl-6 col-lg-6 col-12">
               <div class="header__title">Грузоперевозки </div>
-              <div class="header__subtitle">всех типов грузов от 1 кг до 50 тонн</div>
-              <div class="header__pre">Быстро. Недорого. Аккуратно.</div><a href="tel:+89604919732" class="btn btn--yellow">Позвонить</a><a href="" class="btn btn--outline">Обратный звонок</a>
+              <div class="header__subtitle">всех типов грузов <br>от 100 кг до 50 тонн</div>
+              <div class="header__pre">Быстро. Недорого. Аккуратно.</div><a href="tel:+89604919732" class="btn btn--yellow">Позвонить</a><a href="#modalBack" class="btn btn--outline modal-open">Обратный звонок</a>
             </div>
           </div>
           <div class="row"> 
@@ -81,7 +81,7 @@
         </div>
       </div>
     </header>
-    <section class="park">
+    <section id="park" class="park">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -140,7 +140,7 @@
         </div>
       </div>
     </section>
-    <section class="calc">
+    <section id="calc" class="calc">
       <div class="container">
         <div class="calc__wrap">
           <div class="row">
@@ -151,21 +151,26 @@
               <div class="calc__form">
                 <h2 class="title-section">Рассчитать стоимость доставки груза</h2>
                 <div class="subtitle">Оставьте вашу информацию, мы рассчитаем стоимость и сообщим вам.</div>
-                <form action="">
+                <form>
+                  <!-- Hidden Required Fields-->
+                  <input type="hidden" name="project_name" value="Грузоперевозки">
+                  <input type="hidden" name="admin_email" value="liaforweb@gmail.com">
+                  <input type="hidden" name="form_subject" value="Рассчитать стоимость">
+                  <!-- END Hidden Required Fields-->
                   <div class="form-line">
-                    <input type="text" placeholder="Ваше имя">
+                    <input type="text" placeholder="Ваше имя" name="Имя" required class="rfield">
                   </div>
                   <div class="form-line">
-                    <input type="text" placeholder="Ваш телефон*">
+                    <input type="text" placeholder="Ваш телефон*" name="Телефон" required class="phone-mask rfield">
                   </div>
                   <div class="form-line">
-                    <input type="text" placeholder="Адрес пункта отправления">
+                    <input type="text" placeholder="Адрес пункта отправления" name="Адрес пункта отправления" required class="rfield">
                   </div>
                   <div class="form-line">
-                    <input type="text" placeholder="Адрес пункта назначения">
+                    <input type="text" placeholder="Адрес пункта назначения" name="Адрес пункта назначения" required class="rfield">
                   </div>
                   <div class="form-line">
-                    <input type="text" placeholder="Информация о грузе (название,вес)">
+                    <input type="text" placeholder="Информация о грузе (название,вес)" name="Информация о грузе (название,вес)" required class="rfield">
                   </div>
                   <div class="form-line">
                     <label class="checkbox">
@@ -180,7 +185,10 @@
                       <input type="checkbox" name="Сборка мебели">
                       <div class="input__text">Сборка мебели</div>
                     </label>
-                  </div><a href="" class="btn calc__btn">Узнать стоимость доставки</a>
+                  </div>
+                  <div data-modal="#modalConsult" class="btn calc__btn kviz__btn"> 
+                    <input type="submit" value="Узнать стоимость доставки">
+                  </div>
                 </form>
               </div>
             </div>
@@ -188,7 +196,7 @@
         </div>
       </div>
     </section>
-    <section class="services">
+    <section id="services" class="services">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -233,7 +241,7 @@
         </div>
       </div>
     </section>
-    <section class="doc">
+    <section id="doc" class="doc">
       <div class="container">
         <div class="row">
           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
@@ -251,7 +259,7 @@
         </div>
       </div>
     </section>
-    <section class="team">
+    <section id="team" class="team">
       <div class="container">
         <div class="row">
           <div class="col-12">
@@ -296,7 +304,12 @@
         <div class="row">
           <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12 col-12">
             <div class="consult__form">
-              <form action="">
+              <form>
+                <!-- Hidden Required Fields-->
+                <input type="hidden" name="project_name" value="Грузоперевозки">
+                <input type="hidden" name="admin_email" value="liaforweb@gmail.com">
+                <input type="hidden" name="form_subject" value="Вопрос">
+                <!-- END Hidden Required Fields-->
                 <h2 class="title-section">Остались вопросы? Задавайте!</h2>
                 <div class="subtitle">Оставьте ваши контактные данные, и мы вам перезвоним.</div>
                 <div class="form step-slide__form">
@@ -311,7 +324,9 @@
                     <label for="#modal__agree">Я даю согласие на обработку персональных данных</label>
                   </div>
                   <div class="form-line">
-                    <button type="submit" class="btn btn-finish"><a href="#modalFinish" class="kviz__btn">Перезвоните мне</a></button>
+                    <div data-modal="#modalFinish" class="kviz__btn btn-finish"> 
+                      <input type="submit" value="Перезвоните мне" class="btn">
+                    </div>
                   </div>
                 </div>
               </form>
@@ -344,8 +359,8 @@
           <div class="col-xl-7 col-lg-7 col-md-7 col-sm-7 col-12">
             <div class="footer__title">Меню навигации</div>
             <div class="footer__menu">
-              <div class="footer__items"><a href="#" class="scroll-to">Автопарк</a><a href="#" class="scroll-to">Услуги</a><a href="#" class="scroll-to">Стоимость</a></div>
-              <div class="footer__items"><a href="#" class="scroll-to">Команда</a><a href="#" class="scroll-to">Документы</a><a href="#" class="scroll-to">Консультация</a></div>
+              <div class="footer__items"><a href="#park" class="scroll-to">Автопарк</a><a href="#services" class="scroll-to">Услуги</a><a href="#calc" class="scroll-to">Стоимость</a></div>
+              <div class="footer__items"><a href="#team" class="scroll-to">Команда</a><a href="#doc" class="scroll-to">Документы</a><a href="#consult" class="scroll-to">Консультация</a></div>
             </div>
           </div>
         </div>
@@ -360,6 +375,71 @@
     </footer>
     <script src="js/scripts.min.js"></script>
     <script src="js/common.js"></script>
+    <div id="modalFinish" class="modal disabled">
+      <div class="modal__wrap animated fadeInDown">   
+        <div class="close modal-close">
+          <svg width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="t-popup__close-icon">
+            <g stroke="none" stroke-width="1" fill-rule="evenodd">
+              <rect transform="translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
+              <rect transform="translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
+            </g>
+          </svg>
+        </div>
+        <div class="modal__body">
+          <div class="modal__title">Спасибо!</div>
+          <div class="modal__subtitle">Наш оператор вам скоро позвонит</div>
+        </div>
+      </div>
+    </div>
+    <div id="modalConsult" class="modal disabled">
+      <div class="modal__wrap animated fadeInDown">   
+        <div class="close modal-close">
+          <svg width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="t-popup__close-icon">
+            <g stroke="none" stroke-width="1" fill-rule="evenodd">
+              <rect transform="translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
+              <rect transform="translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
+            </g>
+          </svg>
+        </div>
+        <div class="modal__body">
+          <div class="modal__title">Спасибо!</div>
+          <div class="modal__subtitle">Мы проведем примерный расчёт и перезвоним вам</div>
+        </div>
+      </div>
+    </div>
+    <div id="modalBack" class="modal disabled">
+      <div class="modal__wrap animated fadeInDown">
+        <div class="close modal-close">
+          <svg width="23px" height="23px" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="t-popup__close-icon">
+            <g stroke="none" stroke-width="1" fill-rule="evenodd">
+              <rect transform="translate(11.313708, 11.313708) rotate(-45.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
+              <rect transform="translate(11.313708, 11.313708) rotate(-315.000000) translate(-11.313708, -11.313708) " x="10.3137085" y="-3.6862915" width="2" height="30"></rect>
+            </g>
+          </svg>
+        </div>
+        <div class="modal__body">
+          <div class="modal__title">Введите номер</div>
+          <div class="modal__subtitle">Мы вам перезвоним</div>
+          <div class="modal__form">
+            <form>
+              <!-- Hidden Required Fields-->
+              <input type="hidden" name="project_name" value="Грузоперевозки">
+              <input type="hidden" name="admin_email" value="liaforweb@gmail.com">
+              <input type="hidden" name="form_subject" value="Обратный звонок">
+              <!-- END Hidden Required Fields-->
+              <div class="form-line">
+                <input type="text" placeholder="Ваше имя" name="Имя" required class="rfield">
+              </div>
+              <div class="form-line">
+                <input type="text" placeholder="Ваш телефон*" name="Телефон" required class="phone-mask rfield">
+              </div>
+              <p>Отправляя заявку, я соглашаюсь на обработку персональных данных, в соответствии с политикой конфиденциальности.</p>
+              <input type="submit" value="Отправить" class="btn btn--yellow btnFinish kviz__btn">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
   <!-- END body-->
 </html>

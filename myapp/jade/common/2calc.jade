@@ -1,4 +1,4 @@
-section.calc
+section.calc#calc
     .container
         .calc__wrap
             .row
@@ -8,17 +8,22 @@ section.calc
                     .calc__form
                         h2.title-section Рассчитать стоимость доставки груза
                         .subtitle Оставьте вашу информацию, мы рассчитаем стоимость и сообщим вам.
-                        form(action="")
+                        form
+                            // Hidden Required Fields
+                            input(type='hidden', name='project_name', value='Грузоперевозки')
+                            input(type='hidden', name='admin_email', value='liaforweb@gmail.com')
+                            input(type='hidden', name='form_subject', value='Рассчитать стоимость')
+                            // END Hidden Required Fields
                             .form-line
-                                input(type="text" placeholder="Ваше имя")
+                                input(type="text" placeholder="Ваше имя" name="Имя" required).rfield
                             .form-line
-                                input(type="text" placeholder="Ваш телефон*")
+                                input(type="text" placeholder="Ваш телефон*" name="Телефон" required).phone-mask.rfield
                             .form-line
-                                input(type="text" placeholder="Адрес пункта отправления")
+                                input(type="text" placeholder="Адрес пункта отправления" name="Адрес пункта отправления" required).rfield
                             .form-line
-                                input(type="text" placeholder="Адрес пункта назначения")
+                                input(type="text" placeholder="Адрес пункта назначения" name="Адрес пункта назначения" required).rfield
                             .form-line
-                                input(type="text" placeholder="Информация о грузе (название,вес)")
+                                input(type="text" placeholder="Информация о грузе (название,вес)" name="Информация о грузе (название,вес)" required).rfield
                             .form-line
                                 label.checkbox
                                     input(type="checkbox" name="Погрузка")
@@ -29,4 +34,5 @@ section.calc
                                 label.checkbox
                                     input(type="checkbox" name="Сборка мебели")
                                     .input__text Сборка мебели
-                            a(href="").btn.calc__btn Узнать стоимость доставки
+                            div(data-modal="#modalConsult").btn.calc__btn.kviz__btn 
+                                input(type='submit', value='Узнать стоимость доставки') 

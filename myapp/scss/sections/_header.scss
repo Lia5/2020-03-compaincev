@@ -75,17 +75,17 @@ header {
         }
     }
     &__subtitle {
-        max-width: 440px;
         font-size: 48px;
         line-height: 57px;
+        @media only screen and (max-width: 1199px) {
+            font-size: 40px;
+        }
         @media only screen and (max-width: 992px) {
             font-size: 26px;
             line-height: 1.2;
-            max-width: 250px;
         }
         @media only screen and (max-width: 419px) {
             font-size: 22px;
-            max-width: 220px;
         }
     }
     &__pre {

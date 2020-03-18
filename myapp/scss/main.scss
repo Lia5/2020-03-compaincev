@@ -154,6 +154,12 @@ ul,li {
 		min-width: auto;
 		width: 100%;
 	}
+	input {
+		background: transparent;
+		padding: 0;
+		border: 0;
+		line-height: 1;
+	}
 	&:hover {
 		background-color: #ECC866;
 		box-shadow: 0px 0px 10px #FFFFFF;
@@ -180,7 +186,7 @@ ul,li {
 @import "sections/4doc";
 @import "sections/5team";
 @import "sections/6consult";
-
+@import "sections/modal";
 @import "sections/footer";
 
 @import "media"; // Always at the end

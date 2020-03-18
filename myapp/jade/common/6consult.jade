@@ -3,7 +3,12 @@ section.consult#consult
         .row
             .col-xl-4.col-lg-5.col-md-6.col-sm-12.col-12
                 .consult__form
-                    form(action="")
+                    form
+                        // Hidden Required Fields
+                        input(type='hidden', name='project_name', value='Грузоперевозки')
+                        input(type='hidden', name='admin_email', value='liaforweb@gmail.com')
+                        input(type='hidden', name='form_subject', value='Вопрос')
+                        // END Hidden Required Fields
                         h2.title-section Остались вопросы? Задавайте!
                         .subtitle Оставьте ваши контактные данные, и мы вам перезвоним.
                         .form.step-slide__form
@@ -15,8 +20,9 @@ section.consult#consult
                                 input#modal__agree(type='checkbox', checked='', disabled='')
                                 label(for='#modal__agree') Я даю согласие на обработку персональных данных
                             .form-line
-                                button.btn.btn-finish(type="submit")
-                                    a(href="#modalFinish").kviz__btn Перезвоните мне
+                                div(data-modal="#modalFinish").kviz__btn.btn-finish 
+                                    input.btn(type="submit" value="Перезвоните мне")
+                                
             .col-xl-1.col-lg-1.d-md-none.d-xl-block.col-sm-0.col-0
             .col-xl-7.col-lg-7.col-md-6.col-sm-12.col-12
                 .consult__pic
