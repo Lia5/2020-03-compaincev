@@ -78,7 +78,7 @@ $(function() {
         console.log(th.find('.kviz__btn').attr('data-modal'));
 		$.ajax({
 			type: "POST",
-			url: "../new/mail.php", //Change
+			url: "../mail.php", //Change
 			data: th.serialize()
 		}).done(function() {
             var numModal = th.find('.kviz__btn').attr('data-modal');
@@ -90,9 +90,6 @@ $(function() {
             modal.removeClass('disabled');
             modal.addClass('flex');
             $('body').addClass('body-modal-open');
-            // alert("Thank you!");
-            // $('.btn-finish').css('opacity', '0.5').css('pointer-events', 'none');
-            // $('#modalKviz').removeClass('disabled');
 			setTimeout(function() {
 				// Done Functions
 				th.trigger("reset");
@@ -101,98 +98,6 @@ $(function() {
 		return false;
     });
 
-    // $('form').submit(function() { 
-    //     var th = $(this);
-    //     $($(this).parent().parent().parent()).each(function () {
-    //         th.find('.rfield').addClass('empty_field');
-
-    //             // Функция проверки полей формы
-    //             form.find('.rfield').each(function(){
-    //             if($(this).val() != ''){
-    //                 // Если поле не пустое удаляем класс-указание
-    //                 $(this).removeClass('empty_field');
-
-    //                 if (!form.find('.empty_field').length) {
-    //                     var btn = th.find('.kviz__btn');
-    //                     var numModal = btn.attr('data-modal');
-    //                     var modal =  $(numModal);
-    //                     var modalWrap = $('.modal__wrap');
-    //                     modalWrap.removeClass('fadeOutUp');
-    //                     modalWrap.addClass('fadeInDown');
-    //                     $('.modal').addClass('disabled');
-    //                     modal.removeClass('disabled');
-    //                     modal.addClass('flex');
-    //                     $('body').addClass('body-modal-open');
-    //                     console.log('form');
-    //                     $.ajax({
-    //                         type: "POST",
-    //                         url: "../new/mail.php", //Change
-    //                         data: th.serialize()
-    //                     }).done(function() {
-    //                         // alert("Thank you!");
-    //                         // $('.btn-finish').css('opacity', '0.5').css('pointer-events', 'none');
-    //                         // $('#modalKviz').removeClass('disabled');
-    //                         setTimeout(function() {
-    //                             // Done Functions
-    //                             // th.trigger("reset");
-    //                         }, 1000);
-    //                     });
-    //                 }
-
-    //             } else {}
-    //         });
-    //     });
-	// 	return false;
-    // });
-
-    //   $('.kviz__btn').on('click', function(e){
-    //     // e.preventDefault();
-    //     var btn = $(this);
-    //     console.log(btn);
-    //     $($(this).parent().parent().parent()).each(function () {
-    //         var form = $(this);
-    //         form.find('.rfield').addClass('empty_field');
-
-    //             // Функция проверки полей формы
-
-    //             form.find('.rfield').each(function(){
-    //             if($(this).val() != ''){
-    //                 // Если поле не пустое удаляем класс-указание
-    //                 $(this).removeClass('empty_field');
-
-    //             if (!form.find('.empty_field').length) {
-    //                 var numModal = btn.attr('data-modal');
-    //                 var modal =  $(numModal);
-    //                 var modalWrap = $('.modal__wrap');
-    //                 modalWrap.removeClass('fadeOutUp');
-    //                 modalWrap.addClass('fadeInDown');
-    //                 $('.modal').addClass('disabled');
-    //                 modal.removeClass('disabled');
-    //                 modal.addClass('flex');
-    //                 $('body').addClass('body-modal-open');
-    //                 console.log('form');
-    //                 form2 = form.closest('form');
-    //                 jQuery.ajax({
-    //                     type: "POST",
-    //                     url: "../new/mail.php", //Change
-    //                     data: th.serialize()
-    //                 }).done(function() {
-    //                     alert("Thank you!");
-    //                     setTimeout(function() {
-    //                         // Done Functions
-    //                         // th.trigger("reset");
-    //                     }, 1000);
-    //                 });
-    //                 console.log(btn);
-    //                 // btn.attr('href', "#").removeClass('kviz__btn').css('pointer-events', 'none');
-    //                 // btn.parent().css('opacity', '0.5').css('pointer-events', 'none');
-    //                 // fbq('track', 'Lead');
-    //                 }
-
-    //             } else {}
-    //         });
-    //     })
-    // });
 });
 
 
