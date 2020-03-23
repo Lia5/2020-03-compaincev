@@ -93,11 +93,26 @@ $(function() {
 			setTimeout(function() {
 				// Done Functions
 				th.trigger("reset");
-			}, 1000);
+            }, 1000);
+            if(th.hasClass('ya-return')){
+                yaCounter59666617.reachGoal( 'CALLBACK' );
+                console.log('ret');
+            }
 		});
 		return false;
     });
-
+    // $('.consult__icons a').click(function(){
+    //     fbq('track', 'Lead_net');
+    // });
+    // $('.consult__icons a').click(function(){
+    //     fbq('track', 'Lead_net');
+    // });
+    // $('.consult__icons a').click(function(){
+    //     fbq('track', 'Lead_net');
+    // });
+    // $('.consult__icons a').click(function(){
+    //     fbq('track', 'Lead_net');
+    // });
 });
 
 
