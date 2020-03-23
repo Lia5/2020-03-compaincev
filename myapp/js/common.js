@@ -96,23 +96,20 @@ $(function() {
             }, 1000);
             if(th.hasClass('ya-return')){
                 yaCounter59666617.reachGoal( 'CALLBACK' );
-                console.log('ret');
+            }
+            if(th.hasClass('ya-calc')){
+                yaCounter59666617.reachGoal( 'ZAYAVKA01' ); 
+            }
+            if(th.hasClass('ya-consult')){
+                yaCounter59666617.reachGoal( 'ZAYAVKA02' ); 
             }
 		});
 		return false;
     });
-    // $('.consult__icons a').click(function(){
-    //     fbq('track', 'Lead_net');
-    // });
-    // $('.consult__icons a').click(function(){
-    //     fbq('track', 'Lead_net');
-    // });
-    // $('.consult__icons a').click(function(){
-    //     fbq('track', 'Lead_net');
-    // });
-    // $('.consult__icons a').click(function(){
-    //     fbq('track', 'Lead_net');
-    // });
+    $('.ya-phone').click(function(){
+        yaCounter59666617.reachGoal( 'CALL01' );
+    });
+
 });
 
 
